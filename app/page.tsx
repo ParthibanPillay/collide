@@ -1,8 +1,8 @@
-import SignUpForm from "@/components/SignUpForm";
-import Image from "next/image";
+import { SignIn, SignInButton } from "@clerk/nextjs";
+import SignInPage from "./sign-in/[[...sign-in]]/page";
 
 export default function Home() {
   return (
-    <div>hello world</div>
+    <SignInPage/>
   );
 }

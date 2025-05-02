@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
         const buffer = await file.arrayBuffer();
         const fileBuffer = Buffer.from(buffer);
 
-        const folderPath = parentId ? `/droply/${userId}/folder/${parentId}` : `/droply/${userId}`;
+        const folderPath = parentId ? `/collide/${userId}/folder/${parentId}` : `/collide/${userId}`;
 
         const originalFilename = file.name
 

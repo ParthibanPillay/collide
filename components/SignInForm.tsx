@@ -13,6 +13,7 @@ import { Card, CardBody, CardHeader, CardFooter } from "@heroui/card";
 import { Divider } from "@heroui/divider";
 import { Mail, Lock, AlertCircle, Eye, EyeOff } from "lucide-react";
 import { signInSchema } from "@/schemas/signInSchema";
+import SignUpForm from "./SignUpForm";
 
 export default function SignInForm() {
 
