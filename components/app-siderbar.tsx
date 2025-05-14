@@ -10,6 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { UserButton } from "@clerk/nextjs"
 
 // Menu items.
 const items = [
@@ -37,7 +38,7 @@ const items = [
 
 export function AppSidebar() {
     return (
-        <Sidebar className="bg-[#121211] border border-black ">
+        <Sidebar className="h-screen bg-[#121211] border border-black " collapsible="none">
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupLabel className="flex justify-center">Dashboard</SidebarGroupLabel>
@@ -57,6 +58,7 @@ export function AppSidebar() {
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
+            <UserButton />
         </Sidebar>
     )
 }
