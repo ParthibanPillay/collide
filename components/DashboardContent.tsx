@@ -43,7 +43,7 @@ export default function DashboardContent({
     return (
         <>
             <div className="mt-10 ml-8 mb-8">
-                <h1 className="text-4xl font-bold">Hi, <span className="text-[#9BFF00]">{user?.firstName}</span></h1>
+                <h1 className="text-4xl font-bold">Hi, <span className="text-[#9BFF00]">{user?.firstName}</span> !</h1>
                 <p className="text-lg">your images are waiting for you...</p>
             </div>
             <Tabs

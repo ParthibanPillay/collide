@@ -4,6 +4,7 @@ import "./globals.css";
 import { ClerkProvider, SignedIn, SignedOut, SignIn } from "@clerk/nextjs";
 import { ThemeProvider } from "next-themes";
 import { Montserrat } from "next/font/google"
+import { Providers } from "./providers";
 
 const montserrat = Montserrat({
   subsets: ['latin'], // or ['latin-ext'], ['cyrillic'], etc.
@@ -23,21 +24,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={montserrat.className}>
-      <head />
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <ClerkProvider>
-            <SignedOut>
-              <SignIn routing="hash" />
-            </SignedOut>
-            <SignedIn>
-              {children}
-            </SignedIn>
-          </ClerkProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="dark" suppressHydrationWarning>
+        <body
+          className={`${montserrat.variable} antialiased bg-background text-foreground`}
+        >
+          <Providers>{children}</Providers>
+        </body>
+      </html>
+    </ClerkProvider>
 
   );
 }
